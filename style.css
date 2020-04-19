@@ -284,7 +284,7 @@ body {
   .nav__links:link,
   .nav__link:visited,
   .nav__links:visited{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 1px;
     color: var(--color-secondary-light);
@@ -292,7 +292,7 @@ body {
     font-family: inherit;
     text-transform: uppercase;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem;
     display: block;
     cursor: pointer; 
     transition: all .2s;
@@ -350,7 +350,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+
   
   }
   @media only screen and (max-width: 414px ) {
@@ -376,6 +376,10 @@ body {
       background-color: transparent;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+   
     }}
   /******************************/
   @media only screen and (max-width: 414px ) { 
@@ -416,6 +420,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+
   }
 
 
@@ -427,8 +432,12 @@ body {
     justify-content: center;
     align-content: center;
     padding-top: 1rem;
-    border: 1px solid red;    
+      
   }
+  @media only screen and (max-width: 414px ) {
+    .adv {
+      height: 100%; 
+    }}
 
   .btn {
     padding: 1.4rem 8rem;
@@ -444,9 +453,10 @@ body {
   }
   @media only screen and (max-width: 414px ) {
     .btn {
-      padding: 1.6rem 15rem;
+      padding: 1.6rem 16rem;
       text-align: center;
       font-size: 1.8rem;
+
     }}
   .btn:hover {
     transform: scale(1.02);
@@ -520,8 +530,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
-
-    
    }
 
    @media only screen and (max-width:26.6em){
@@ -529,6 +537,12 @@ body {
     background: transparent;
     }
  }
+ @media only screen and (max-width:414px){
+  .homes {
+    height: calc(100% + 0rem);
+  
+  }
+}
 
    .home {
     background-color:inherit;
