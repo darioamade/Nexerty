@@ -650,17 +650,23 @@ body {
 /**************************************************************/
 
   .homes {
-    border: 10px solid red;
     width: 144rem;
     margin: 0 auto;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    
    }
+
+   @media only screen and (max-width:600px){
+    .homes {
+      flex-direction: column;
+      border: 10px solid red;
+  
+    }
+ }
 
    @media only screen and (max-width:26.6em){
     .homes {
@@ -683,6 +689,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding:2rem; 
+    border: 10px solid red;
   }
 
   @media only screen and (max-width: 26.6em ) { 
