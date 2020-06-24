@@ -258,6 +258,13 @@ body {
   z-index: 8000;
 }
 
+@media only screen and (max-width:768px){
+  .nav.active,
+  .nav  {
+    width: 100vw;
+  }
+}
+
 .nav ul {
   position: absolute;
   top: 40%;
