@@ -68,7 +68,7 @@ body {
 }
 .container {
   display: grid;
-  grid-template-rows: 100vh 70vh 80vh 70vh min-content min-content min-content 30vh 5vh;
+  grid-template-rows: 100vh 70vh 80vh 70vh min-content min-content  min-content 50vh 15vh;
   grid-template-columns: 1fr;
   margin: 0 auto;
 }
@@ -76,9 +76,15 @@ body {
 @media only screen and (max-width: 768px) {
   .container {
     display: grid;
-    grid-template-rows: 100vh 70vh 80vh 70vh min-content min-content 60vh 30vh 5vh;
+    grid-template-rows: 100vh 100vh 80vh 70vh min-content min-content 1vh min-content 15vh;
     grid-template-columns: 1fr;
  
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .container  {
+    grid-template-rows: 100vh min-content 80vh 70vh min-content min-content 1vh min-content 15vh;
   }
 }
 /***********************************************/
@@ -587,15 +593,17 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
   align-content: center;
 }
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width:600px){
   .homes {
+    width: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
     flex-direction: column;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -610,13 +618,15 @@ body {
   padding: 2rem;
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width:600px){
   .home {
-    width: 25%;
-    height: 50rem;
+    background-color: inherit;
+    width: 100%;
+    height: 40vh;
+    margin: 8rem;
   }
-} */
 
+}
 
 /******************************/
 .picture,
@@ -705,12 +715,21 @@ body {
   align-items: flex-end;
 }
 
+
 .icon-box-rooms,
 .icon-box-rooms-x {
   fill: #c69963;
   height: 2rem;
   width: 2rem;
   margin-right: 6px;
+}
+@media only screen and (max-width:600px) {
+  .icon-box-rooms,
+  .icon-box-rooms-x {
+    height: 6rem;
+    width: 6rem;
+
+  }
 }
 
 .icon-box-rooms-x {
@@ -745,6 +764,18 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+@media only screen and (max-width:768px) {
+  .home-price p,
+  .home__rooms p {
+  font-size: 2rem;
+  }
+}
+@media only screen and (max-width:600px) {
+  .home-price p,
+  .home__rooms p {
+  font-size: 3rem;
+  }
+}
 
 .btn-real {
   flex: 1;
@@ -758,7 +789,7 @@ body {
   font-size: 1.8rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 1.25rem;
+  padding: 1.75rem;
   background-color: var(--color-secondary-light);
   color: #fff;
   font-weight: 500;
@@ -766,11 +797,32 @@ body {
   transition: all 0.2s;
 }
 
+@media only screen and (max-width:600px) {
+  .home__btn {
+
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--color-secondary-light);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing:2px;
+    border: none;
+    transition: all 0.2s;
+  }
+}
+
 .home__btn:hover {
   background-color: var(--color-txt-light);
   color: rgb(255, 255, 255);
 }
 
+@media only screen and (max-width:768px){
+  #helper{
+    display: none;
+  }
+}
 /***********************************************/
 /*****************  about      ****************/
 /***********************************************/
@@ -1108,7 +1160,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
   }
  }
  
@@ -1120,8 +1171,13 @@ body {
   display: block;
   margin: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .gallery__img {
+    width: 140rem;
+  }
+  
 
-
+}
 
 .gallery__item--1 {
   grid-row: 1 / span 2;
@@ -1257,35 +1313,270 @@ body {
 .contact-area {
   grid-column: 1 / 1;
   grid-row: 8 / span 1;
-  background-color: rgb(242, 0, 255);
+  background-color: rgb(255, 255, 255);
   width: 144rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.client-1 {  
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+
+
+@media (max-width:26.6em) {
+  .client-1  { 
+    flex: 0 0 20%;
+  }
+}
+@media (max-width:26.6em) {
+  .client-2  { 
+    flex: 0 0 80%;
+  }
+}
+
+.client-1 h2,
+.client-1 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing:2px;
+  text-align: center;
+  color: var(--color-txt-light-4);
+  font-weight: 600;
+}
+@media (max-width: 1000px) {
+  .client-1  h2,
+  .client-1  p  { 
+    font-size: 3rem;
+  }
+}
+
+@media (max-width:26.6em) {
+.client-1  h2,
+.client-1  p { 
+  font-size: 3rem;
+  }
+}
+
+.client-1  p{ 
+   font-size: 2rem;
+    font-weight: 300;
+    text-transform: initial;
+}
+@media (max-width:1000px) {
+  .client-1  p  { 
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+.client-1  p { 
+  font-size: 2.6rem;
+  }
+}
+
+
+
+.client-2 {  
+  flex: 0 0 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content:center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .client-2 {  
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+  }
+}
+
+
+.icon-box-11 {
+  height: 8rem;
+  width: 6rem;
+  fill: rgb(0, 0, 0);
+  background-color:transparent;
+  cursor: pointer;
+}
+
+
+@media (max-width:41em) {
+  .icon-box-11 { 
+    height: 6rem;
+    width: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-box-11 { 
+    height: 10rem;
+    width: 8rem;
+  }
+}
+
+.division-1,
+.division-2,
+.division-3 {
+  width: 40rem;
+  height: 20rem;
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .division-1,
+  .division-2,
+  .division-3 {
+    width: 80%;
+    height: 40rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+}
+
+.words h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: initial;
+}
+@media (max-width:1000px) {
+  .words h4 { 
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  .words h4 { 
+  font-size: 2.2rem;
+  }
+}
+
+
+.words p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing:1px;
+  line-height: 2;
+  text-align: center;
+  color: var(--color-txt-light-4);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px ) { 
+  .words p { 
+    font-size: 2.2rem;  
+  }
+}
+
+@media only screen and (max-width: 500px ) { 
+  .words p { 
+    font-size: 2.5rem;  
+  }
+}
+
+.words h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: underline;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing:1px;
+  line-height: 2;
+  text-align: center;
+  color: var(--color-txt-light-4);
+  cursor: pointer;
+} 
+
+@media (max-width:1000px) {
+  .words h5 { 
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .words h5 { 
+  font-size: 2.3rem;
+  }
+}
+
+@media only screen and (max-width: 414px ) { 
+   .words h5 { font-size: 2.5rem;
+        
+  }
+}
+
+@media only screen and (max-width: 375px ) { 
+   .words h5 { font-size: 2rem;
+        
+  }
+}
+
 
   /***********************************************/
   /*****************  footer ****************/
   /***********************************************/
-}
+  .footer-area {
+    grid-column: 1 / 1;
+    grid-row: 9 / span 1;
+    background-color: var(--color-blue-dark-1);
+    height: 100%;
+   
+
+  }
+
 .footer {
-  grid-column: 1 / 1;
-  grid-row: 9 / span 1;
   width: 144rem;
   margin: 0 auto;
-
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+ flex-direction: column;
 }
 
-@media (max-width: 41em) {
-  footer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.footer-top {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding: 0.5rem;
 }
-.copy,
+
+.logo-footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.logo-footer .logo {
+  width: 18rem;
+  height: 6rem;
+}
+.logo-footer p {
+  font-size:1.4rem;
+  color: #fff;
+}
+
+
 .footer-links,
 .footer-icons,
 .footer-nav-icons {
@@ -1363,7 +1654,7 @@ body {
   font-weight: 200;
   font-family: sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
 }
 

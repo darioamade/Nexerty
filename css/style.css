@@ -1602,3 +1602,10 @@ footer {
 .search-icon-footer:hover {
   fill: var(--color-primary-white);
 }
+
+
+.logo-footer {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
